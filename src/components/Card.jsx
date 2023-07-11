@@ -50,13 +50,19 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-function Card() {
+function Card({ type }) {
   return (
     <Link to="/video/test" style={{ textDecoration: "none" }}>
-      <Container>
-        <Image src="https://i9.ytimg.com/vi_webp/k3Vfj-e1Ma4/mqdefault.webp?v=6277c159&sqp=CIjm8JUG&rs=AOn4CLDeKmf_vlMC1q9RBEZu-XQApzm6sA"></Image>
-        <Details>
-          <ChannelImage src="https://yt3.ggpht.com/yti/APfAmoE-Q0ZLJ4vk3vqmV4Kwp0sbrjxLyB8Q4ZgNsiRH=s88-c-k-c0x00ffffff-no-rj-mo"></ChannelImage>
+      <Container type={type}>
+        <Image
+          type={type}
+          src="https://i9.ytimg.com/vi_webp/k3Vfj-e1Ma4/mqdefault.webp?v=6277c159&sqp=CIjm8JUG&rs=AOn4CLDeKmf_vlMC1q9RBEZu-XQApzm6sA"
+        ></Image>
+        <Details type={type}>
+          <ChannelImage
+            type={type}
+            src="https://yt3.ggpht.com/yti/APfAmoE-Q0ZLJ4vk3vqmV4Kwp0sbrjxLyB8Q4ZgNsiRH=s88-c-k-c0x00ffffff-no-rj-mo"
+          ></ChannelImage>
           <Texts>
             <Title>Text Video</Title>
             <ChannelName>Phan Anh Nguyen</ChannelName>

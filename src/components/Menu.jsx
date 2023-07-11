@@ -80,7 +80,7 @@ const Title = styled.h2`
   margin-bottom: 20px;
 `;
 
-const Menu = ({ darkMode, setDarkMode }) => {
+function Menu({ darkMode, setDarkMode }) {
   return (
     <Container>
       <Wrapper>
@@ -114,12 +114,12 @@ const Menu = ({ darkMode, setDarkMode }) => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          {/* <Link to="signin" style={{ textDecoration: "none" }}> */}
-          <Button>
-            <AccountCircleOutlinedIcon />
-            SIGN IN
-          </Button>
-          {/* </Link> */}
+          <Link to="signin" style={{ textDecoration: "none" }}>
+            <Button>
+              <AccountCircleOutlinedIcon />
+              SIGN IN
+            </Button>
+          </Link>
         </Login>
         <Hr />
         <Title>BEST OF YOUTUBE</Title>
@@ -167,6 +167,6 @@ const Menu = ({ darkMode, setDarkMode }) => {
       </Wrapper>
     </Container>
   );
-};
+}
 
 export default Menu;
